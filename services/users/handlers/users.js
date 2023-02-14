@@ -41,7 +41,7 @@ const update = async (req, res) => {
             updatedUser['password'] = bcrypt.hashSync(password);
         }
         if (req.files) {
-            updatedUser['avatarFileBase64'] = convertFileToBase64(req.files.avatar_file);// imeto na property od form-data kako sto se praka od front-end
+            updatedUser['avatarFileBase64'] = convertFileToBase64(req.files.avatar_file);
         }
         await user.changePersonalInfo(req.auth.uid, updatedUser);
         return res.status(204).send('');
@@ -58,7 +58,6 @@ const login = async (req, res) => {
             return res.status(409).send('Bad request. Bad login credentials.')
         }
         if (!bcrypt.compareSync(req.body.password, u.password)) {
-            // vo compareSync prviot parametar mi bese stringot, a vtoriot bese hash-ot
             return res.status(400).send('Cannot login. Bad credentials.')
         }
         let payload = {
