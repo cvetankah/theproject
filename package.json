@@ -1,0 +1,31 @@
+{
+  "name": "theproject_final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./services/proxy/index.js",
+    "proxy": "node ./services/proxy/index.js",
+    "auth": "node ./services/auth/index.js",
+    "recipes": "node ./services/recipes/index.js",
+    "storage": "node ./services/storage/index.js",
+    "users": "node ./services/users/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-http-proxy": "^1.6.3",
+    "express-jwt": "^7.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun.js": "^8.0.6",
+    "mongoose": "^6.7.5",
+    "node-fetch": "^2.6.7",
+    "node-input-validator": "^4.5.1"
+  }
+}
