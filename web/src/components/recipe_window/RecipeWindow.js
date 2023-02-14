@@ -15,6 +15,17 @@ function RecipeWindow({recipeId}) {
             search: ''
         });
     };
+    const handleLikeRecipeClick = (recipeId) => {
+        api.likeRecipeWithId(recipeId).then(response => {
+            if (response.ok) {
+                const likes = recipe.likedByUser ? recipe.likes - 1 : recipe.likes + 1;
+                const likedByUser = !recipe.likedByUser;
+                setRecipe(recipe => {
+                    return {...recipe, likes: likes, likedByUser: likedByUser};
+                });
+            }
+        });
+    }
     return <>
         {
             !recipe
@@ -38,7 +49,7 @@ function RecipeWindow({recipeId}) {
                                     <span>{recipe.preparation_time} minutes</span>
                                     <span className="card-info-icon">&#127869;</span>
                                     <span>{recipe.no_people} persons</span>
-                                    <span className="card-info-icon star">&#9733;</span> <span>{recipe.likes}</span>
+                                    <span onClick={() => handleLikeRecipeClick(recipe._id)} className={`card-info-icon ${recipe.likedByUser ? 'gold-star' : 'star'}`}>&#9733;</span> <span>{recipe.likes}</span>
                                 </div>
                             </div>
                             <div className="window-text">
