@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: #F8F7F2 0 0 no-repeat padding-box;
+}
+
+html, body, #root {
+    height: 100%;
+    min-height: 100%
+}
+
+button.transparent, label.transparent {
+    font-family: 'Roboto', serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #A5A5A5;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #A5A5A5;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button-link-transparent {
+    font-family: 'Roboto', serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #A5A5A5;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #A5A5A5;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+button.green {
+    font-family: 'Roboto', serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: #96BB36 0 0 no-repeat padding-box;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px #00000029;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.button-link-green {
+    font-family: 'Roboto', serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: #96BB36 0 0 no-repeat padding-box;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px #00000029;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.green {
+    color: #96BB36;
+}
+
+.orange {
+    color: #F0972A;
+}
+
+.darkgrey {
+    color: #626262;
+}
+
+.midgrey {
+    color: #A5A5A5;
+}
+
+.star, .gold-star:hover {
+    cursor: pointer;
+    color: #A5A5A5 !important;
+}
+
+.gold-star, .star:hover {
+    cursor: pointer;
+    color: gold !important;
+}
+
+span.error {
+    font-size: 11px;
+    color: #F52929;
+}

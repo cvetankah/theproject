@@ -1,0 +1,24 @@
+.title {
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #96BB36;
+    border-bottom: 1px solid #D3D3D3;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.title-text {
+    background-color: #F8F7F2;
+    padding-right: 15px;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    margin: 20px 0 40px 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 64px;
+    grid-row-gap: 50px;
+}
